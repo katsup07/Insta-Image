@@ -1,0 +1,112 @@
+p{
+  text-align: center;
+  margin: 0.4rem;
+  padding: 0.4rem;
+}
+
+section{
+  margin: 0.5rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+img{
+  max-width: 100%;
+  border: 0.1px solid rgb(167, 167, 167);
+  box-shadow: 0px 1px 4px 1px rgb(218, 218, 218);
+  margin-bottom: 0.3rem;
+  border-radius: 0.2rem;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+}
+
+textarea{
+  border-radius: 0.5rem;;
+  max-width: 19rem;
+  resize: none;
+  padding: 0.2rem;
+}
+
+ul.comments{
+  width: 100%;
+  margin: 0.2rem;
+
+}
+
+li.comment{
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border-radius: 0.7rem;
+  border: 0.1px solid grey;
+}
+
+button.comment-visibility, button.add{
+  margin: 0.5rem;
+  padding: 0.2rem 0.4rem;
+  max-width: 8rem;
+  border: none;
+  border-radius: 0.9rem;
+  background-color:  transparent;
+  border: 0.1px solid black;
+  color: rgb(0, 0, 0);
+  display: block;
+}
+
+button.comment-visibility:hover, button.add:hover{
+  background-color:  rgba(255, 255, 255, 0.145);
+  border: 0.1px solid rgb(50, 146, 93);
+  color: rgb(50, 146, 93);
+}
+
+button.add{
+  margin: 0.5rem;
+  max-width: 5rem;
+}
+
+.picture-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 20rem;
+  border: 1px solid rgb(228, 228, 228);
+  background: rgb(255, 255, 218);
+  border-radius: 0.5rem;
+  box-shadow: 2px 2px 4px rgb(209, 209, 209);
+  margin: 1rem;
+}
+
+.comments-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.comments-container button{
+  font-size: 0.8rem;
+}
+
+li.comment{
+  max-width: 100%;;
+}
+
+@media screen and (max-width: 400px){
+  h2, .comments{
+    font-size: 1rem;
+  }
+
+  button.add, button.comment-visibility{
+    font-size: 0.6rem;
+  }
+
+  textarea{
+    max-width: 12rem;
+    margin: 0.3rem;
+  }
+}

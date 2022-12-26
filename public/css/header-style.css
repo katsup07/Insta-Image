@@ -1,0 +1,58 @@
+
+header{
+  background-color: rgb(44, 142, 96);
+}
+
+
+li{
+  list-style: none;
+}
+
+li:not(.login){
+margin-right: 2rem;
+}
+
+a{
+  text-decoration: none;
+  color: rgb(255, 229, 36);
+}
+
+a:hover, a:active{
+  color: rgb(204, 255, 203);
+}
+
+.navigation{
+  display: flex;
+  justify-content: space-between;
+}
+
+.home{
+  font-size: 4rem;
+}
+
+.nav-links{
+  display: flex;
+  font-size: 2rem;
+  align-items:flex-end;
+  max-height: 100%;
+  padding: 0.4rem;
+}
+
+@media screen and (max-width: 400px){
+ ul, .nav-links{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+li{
+   font-size: 1.5rem;
+ }
+
+ li.login{
+  margin-right: 2rem;
+ }
+ .home a{
+  font-size: 3rem;
+ }
+}
