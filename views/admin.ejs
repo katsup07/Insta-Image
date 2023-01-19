@@ -9,14 +9,16 @@
     <title>Add Picture Form</title>
 	</head>
   <%- include('./includes/header.ejs') %>
-	<h1>Add Picture Form</h1>
-	<form action="/admin/add-picture" method="POST">
-		<div class="form-controls">
-			<label for="title">Picture Title</label>
-			<input type="text" name="title" />
-			<label for="url">Url</label>
-			<input type="url" name="url"/>
-      <button class="submit">Submit</button>
-		</div>
-	</form>
+	<section>
+    <h1>Add Picture Form</h1>
+    <form action="/admin/add-picture" method="POST">
+      <div class="form-controls">
+        <label for="title">Picture Title</label>
+        <input type="text" name="title" />
+        <label for="url">Url</label>
+        <input type="url" name="url"/>
+        <button class="submit">Submit</button>
+      </div>
+    </form>
+  </section>
 </html>

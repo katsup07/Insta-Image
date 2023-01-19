@@ -1,34 +1,30 @@
-h1{
-  font-size: 2.7rem;
-  text-align: center;
+body{
+  display: flex;
+  justify-content: center;
+
 }
 
 section{
-  margin-top: 11rem;
-}
-.form-controls{
+  margin-top: 13rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-width: 12rem;
 }
 
-.form-control{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+h1{
+  font-size: 2.5rem;
 }
-  
-button.login{
+
+button.logout{
   margin-top: 0.6rem;
   padding: 0.2rem 0.4rem;
-  max-width: 6rem;
+  max-width: 10rem;
   border: none;
   border-radius: 0.3rem;
   background-color: rgb(241, 245, 242);
   border: 0.1px solid rgb(131, 131, 131);
-  display: flex;
-  justify-content: flex-start;
 }
 
 button:hover{
@@ -41,13 +37,9 @@ a.signup{
   margin-top: 0.4rem;
 }
 
-@media screen and (max-width: 350px){
+/* @media screen and (max-width: 350px){
   h1{
     font-size: 1.5rem;
-  }
-
-  .form-controls, input, button{
-    font-size: 0.9rem;
   }
 }
 @media screen and (max-width: 250px){
@@ -55,7 +47,4 @@ a.signup{
     font-size: 1.3rem;
   }
 
-  .form-controls, input, button{
-    font-size: 0.3rem;
-  }
-}
+} */

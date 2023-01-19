@@ -6,30 +6,30 @@
     <link rel="stylesheet" href="public/css/header-style.css">
     <link rel="stylesheet" href="public/css/pictures-style.css">
     <link rel="stylesheet" href="public/css/global-style.css">
+    <title>Pictures</title>
   </head>
  <%- include('./includes/header.ejs') %>
 	<body>
     <% if(data.pictures.length === 0) { %>
     <p>Currently there are no pictures. Upload a picture.</p>
     <% } %>
-
 		<section>
-    <% for(let item of data.pictures) { %>
+    <% for(let pic of data.pictures) { %>
         <div class="picture-container">
-          <h2><%= item.title %></h2>
-          <img src="<%= item.url %>"></img>
+          <h2><%= pic.title %></h2>
+          <img src="<%= pic.url %>"></img>
           <div class="comments-container ">
             <button class="comment-visibility">hide comments</button>
             <ul class="comments">
-            <%  for(let c of data.comments) { %>
-              <% if(c.id === item.title) { %>
-                <li class="comment"><%= c.comment %></li>
-                  <% } %>
+            <%  for(let comment of pic.comments) { %>
+             
+                <li class="comment"><%= comment %></li>
+            
               <% } %>
             </ul> 
             <form action="/admin/add-comment" method="POST" >
               <textarea name="comment" id="comment" cols="40" rows="5"></textarea>
-              <input type="hidden" value="<%= item.title %>" name="pictureId"/>
+              <input type="hidden" value="<%= pic.title %>" name="title"/>
               <button class="add">add</button>
             </form>
           </div>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../public/css/logout-style.css" />
+		<link rel="stylesheet" href="../public/css/header-style.css" />
+		<link rel="stylesheet" href="../public/css/global-style.css" />
+		<title>Signup</title>
+	</head>
+	<%- include('./includes/header.ejs') %>
+	<body>
+		<section>
+			<h1>Logout</h1>
+			<form action="/auth/logout" method="POST">
+        <button class="logout">Confirm</button>
+      </form>
+		</section>
+	</body>
+</html>

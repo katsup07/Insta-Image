@@ -3,7 +3,6 @@ const path = require('path');
 const app = express();
 const bodyParser = require('body-parser');
 
-const pictureRoutes = require('./routes/pictures.cjs');
 const homeRoutes = require('./routes/home.cjs');
 const authRoutes = require('./routes/auth.cjs');
 const { router: adminRoutes } = require('./routes/admin.cjs');
@@ -16,10 +15,10 @@ app.use(bodyParser.urlencoded({extended: false}));
 // app.use('/admin/add-picture', adminRoutes);
 // app.use('/admin/add-comment', adminRoutes);
 app.use('/admin', adminRoutes);
-app.use('/pictures', pictureRoutes);
 app.use('/auth', authRoutes);
 app.use('/', homeRoutes);
 
+// === 404 Not Found ===
 app.use((req, res) => {
 	res.status(404).send('<h2>404 - Page not found<h2>');
 });

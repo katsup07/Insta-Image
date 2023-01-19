@@ -9,22 +9,23 @@
     <title>Login</title>
 	</head>
   <%- include('./includes/header.ejs') %>
-	<section>
-    <h1>Login</h1>
-    <form action="/auth/login" method="POST">
-      <div class="form-controls">
-          <div class="form-control">
-            <label for="title">Username</label>
-            <input type="text" name="username" />
-          </div>
-          <div class="form-control">
-            <label for="password">Password</label>
-            <input type="password" name="password"/>
-          </div>
-          <div class="login-button-container">
-            <button class="login">Login</button>
-          </div>
-        </div>
-    </form>
-  </section>
+    <section>
+        <h1>Login</h1>
+        <form action="/auth/login" method="POST">
+          <div class="form-controls">
+              <div class="form-control">
+                <label for="username">Username</label>
+                <input type="text" name="username" />
+              </div>
+              <div class="form-control">
+                <label for="password">Password</label>
+                <input type="password" name="password"/>
+              </div>
+              <div class="login-button-container">
+                <button class="login">Login</button>
+              </div>
+              <a class="signup" href="/auth/signup">Sign Up Instead -></a>
+            </div>
+        </form>
+      </section>
 </html>

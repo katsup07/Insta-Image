@@ -1,3 +1,7 @@
+section{
+  margin-top: 12rem;
+}
+
 input {
 		display: block;
     border-radius: 0.1rem;
@@ -39,4 +43,23 @@ input {
   
   button:hover{
     background-color: rgb(251, 242, 147);
+  }
+
+  @media screen and (max-width: 350px){
+    h1{
+      font-size: 1.5rem;
+    }
+
+    .form-controls, input, button{
+      font-size: 0.9rem;
+    }
+  }
+  @media screen and (max-width: 250px){
+    h1{
+      font-size: 1rem;
+    }
+
+    .form-controls, input, button{
+      font-size: 0.3rem;
+    }
   }

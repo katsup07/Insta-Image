@@ -1,6 +1,10 @@
-
 header{
   background-color: rgb(44, 142, 96);
+  box-shadow: 1px 1px 5px 1px rgba(54, 54, 54, 0.56);
+  position: fixed;
+  top: 0;
+  padding-top: 1rem;
+  width: 100%
 }
 
 
@@ -8,13 +12,15 @@ li{
   list-style: none;
 }
 
-li:not(.login){
-margin-right: 2rem;
+li:first-child{
+  padding-left: 0.2rem;
 }
+
 
 a{
   text-decoration: none;
   color: rgb(255, 229, 36);
+  margin: 0.8rem;
 }
 
 a:hover, a:active{
@@ -38,7 +44,7 @@ a:hover, a:active{
   padding: 0.4rem;
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 500px){
  ul, .nav-links{
   display: flex;
   flex-direction: column;
@@ -49,9 +55,6 @@ li{
    font-size: 1.5rem;
  }
 
- li.login{
-  margin-right: 2rem;
- }
  .home a{
   font-size: 3rem;
  }

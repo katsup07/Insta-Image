@@ -1,3 +1,4 @@
+const Picture = require('../models/picture.cjs');
 const express = require('express');
 const router = express.Router();
 
@@ -10,18 +11,22 @@ router.get('/', (req, res) => {
 });
 
 // == /admin/add-picture ==
-router.post('/add-picture', (req, res) => {
-  console.log(req.body);
-  pictures.push({title: req.body.title, url: req.body.url});
-  console.log('pictures: ', pictures);
+router.post('/add-picture', async(req, res) => {
+  try{
+  const result = await new Picture(req.body.title, req.body.url, 'some_user').save();
+  console.log(result);
   res.redirect('/');
+  } catch(err){
+    console.log('err: ', err);
+    return res.status(400).render('error', {error: err});
+  }
 });
 
 // == /admin/add-comment ==
-router.post('/add-comment', (req, res) => {
+router.post('/add-comment', async(req, res) => {
   console.log('adding comment...', req.body);
-  // console.log('comments: ', comments);
-  comments.push({id: req.body.pictureId, comment: req.body.comment});
+  // comments.push({id: req.body.pictureId, comment: req.body.comment});
+  await Picture.addComment(req.body.title, req.body.comment);
   res.redirect('/');
 });
 

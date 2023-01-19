@@ -1,6 +1,7 @@
 p{
   text-align: center;
   margin: 0.4rem;
+  margin-top: 10rem;
   padding: 0.4rem;
 }
 
@@ -79,6 +80,7 @@ button.add{
   border-radius: 0.5rem;
   box-shadow: 2px 2px 4px rgb(209, 209, 209);
   margin: 1rem;
+  margin-top: 8rem; /* Margin to keep each post away from the fixed header */
 }
 
 .comments-container{
@@ -96,7 +98,23 @@ li.comment{
   max-width: 100%;;
 }
 
+@media screen and (max-width: 675px){
+
+  .picture-container:first-child{
+    margin-top: 8rem;
+  }
+
+  .picture-container:not(first-child){
+    margin-top: 1rem; /* Margin to keep each post away from the fixed header */
+  }
+}
+
 @media screen and (max-width: 400px){
+  p{
+    font-size: 0.7rem;
+    margin-top: 11rem;
+  }
+
   h2, .comments{
     font-size: 1rem;
   }
@@ -109,4 +127,12 @@ li.comment{
     max-width: 12rem;
     margin: 0.3rem;
   }
+
+  .picture-container:first-child{
+    margin-top: 10rem;
+  }
+
+  h2{
+    font-size: 1.2rem;
+   }
 }
